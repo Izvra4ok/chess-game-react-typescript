@@ -30,8 +30,8 @@
     position: relative;
 }
 .black {
-    background-color: #f3d293;
+    background-color: #b49c6d;
 }
 .white {
-    background-color: #000000;
+    background-color: rgba(45, 57, 215, 0.3);
 }
