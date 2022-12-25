@@ -17,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .cell {
     width: 64px;
     height: 64px;
@@ -24,14 +25,27 @@
     justify-content: center;
     align-items: center;
 }
+
 .cell img {
     width: 48px;
     height: 48px;
     position: relative;
 }
+
 .black {
+    background-color: rgb(112, 85, 41);
+}
+
+.white {
     background-color: #b49c6d;
 }
-.white {
-    background-color: rgba(45, 57, 215, 0.3);
+
+.selected{
+    background-color: grey;
+}
+.available{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: green;
 }
