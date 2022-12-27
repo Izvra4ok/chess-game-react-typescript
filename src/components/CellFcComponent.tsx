@@ -13,7 +13,7 @@ const CellFcComponent: React.FC<CellProps> = ({cell, selected, click}) => {
     return (
         <div onClick={() => click(cell)}
              className={["cell", cell.color, selected ? "selected" : ""].join(" ")}
-             style={{background: cell.available && cell.figure ? "green" : ""}}>
+             style={{background: cell.available && cell.figure ? "teal" : ""}}>
 
             {cell.available && !cell.figure && <div className="available"></div>}
 

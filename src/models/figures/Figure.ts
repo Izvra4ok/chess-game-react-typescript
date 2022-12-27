@@ -1,6 +1,6 @@
 import {Colors} from "../Colors";
 import logo from "../../assets/white-knight.png";
-import { Cell } from "../Cell";
+import {Cell} from "../Cell";
 
 export enum FigureNames {
     FIGURE = "Фигура",
@@ -12,12 +12,12 @@ export enum FigureNames {
     BISHOP = "Слон"
 }
 
-export class Figure{
-    color:Colors;
+export class Figure {
+    color: Colors;
     logo: typeof logo | null;
     cell: Cell;
     name: FigureNames;
-    id:number;
+    id: number;
 
 
     constructor(color: Colors, cell: Cell) {
@@ -29,10 +29,17 @@ export class Figure{
         this.id = Math.random();
     }
 
-    canMove(target: Cell) : boolean {
+    canMove(target: Cell): boolean {
+        if (target.figure?.color === this.color) {
+            return false;
+        }
+        if (target.figure?.name === FigureNames.KING) {
+            return false;
+        }
         return true;
     }
-    moveFigure(target: Cell){
-        
+
+    moveFigure(target: Cell) {
+
     }
 }

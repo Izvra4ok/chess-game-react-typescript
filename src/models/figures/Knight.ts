@@ -11,4 +11,13 @@ export class Knight extends Figure {
         this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
         this.name = FigureNames.KNIGHT;
     }
+
+    canMove(target: Cell): boolean {
+        if (!super.canMove(target)) {
+            return false
+        }
+        const dY = Math.abs(this.cell.y - target.y)
+        const dX = Math.abs(this.cell.x - target.x)
+        return (dX === 1 && dY === 2) || (dX === 2 && dY === 1)
+    }
 }
